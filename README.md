@@ -14,9 +14,3 @@ BACKSPACE --> End the edition.
 # Notes:
 WARNING: If you press DELETE to hide the object and then exit editing, it will not be possible to revert the object through automatic means.
 You can't delete LOD's using this editor.
-<!--ts-->
-      * [/editmode <on/off>](#pre-requisitos)
-      * [INSERT](#local-files)
-      * [DELETE](#remote-files)
-      * [BAKCSPACE](#multiple-files)
-<!--te-->
