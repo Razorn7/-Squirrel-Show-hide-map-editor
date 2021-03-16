@@ -1,4 +1,6 @@
 Editing <- false;
+Deleted <- false;
+
 SelectedObject <- null;
 BACKSPACE <- KeyBind(0x08)
 INSERT <- KeyBind(0x2D)
@@ -45,7 +47,7 @@ function KeyBind::OnDown(key)
 				data.WriteInt(1);
 				data.WriteString(SelectedObject.ModelIndex + "\n" + SelectedObject.Position.X + "\n" + SelectedObject.Position.Y + "\n" + SelectedObject.Position.Z);
 				Server.SendData(data);
-				Deleted = true;
+				::Deleted = true;
 			}
 			else Console.Print("The obect is already hidden.");
 		break;
@@ -53,14 +55,14 @@ function KeyBind::OnDown(key)
 			if (Deleted == true)
 			{
 				local data = Stream();
-				data.WriteInt(1);
+				data.WriteInt(2);
 				data.WriteString(SelectedObject.ModelIndex + "\n" + SelectedObject.Position.X + "\n" + SelectedObject.Position.Y + "\n" + SelectedObject.Position.Z);
 				Server.SendData(data);
-				Deleted = false;
+				::Deleted = false;
 			}
 			else Console.Print("The obect is already shown.");
 		break;
-		casee BACKSPACE:
+		case BACKSPACE:
 			local data = Stream();
 			data.WriteInt(4);
 			data.WriteString(SelectedObject.ModelIndex + "\n" + SelectedObject.Position.X + "\n" + SelectedObject.Position.Y + "\n" + SelectedObject.Position.Z);

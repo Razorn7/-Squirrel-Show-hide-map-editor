@@ -88,7 +88,7 @@ function onClientScriptData(player)
 				Count --;
 			}
 		break;
-		case 43:
+		case 3:
 			if (EditMode[player.ID].Selected == false) EditMode[player.ID].Selected = true;
 		break;
 		case 4:
@@ -120,7 +120,7 @@ function HideObjects()
 		}
 		::FreeSQLQuery(q);
 	}
-	print("[INF] Loaded objects - " + i);
+	print("[INF]  - " + i);
 	Count = i;
 }
 
