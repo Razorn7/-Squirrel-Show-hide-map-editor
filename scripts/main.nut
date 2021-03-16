@@ -120,7 +120,7 @@ function HideObjects()
 		}
 		::FreeSQLQuery(q);
 	}
-	print("[INF]  - " + i);
+	print("[INF] Loaded objects - " + i);
 	Count = i;
 }
 
