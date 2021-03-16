@@ -12,7 +12,7 @@ function onScriptLoad()
 	
 	QuerySQL(EditDB, "CREATE TABLE IF NOT EXISTS Objects (StaticID INTEGER, ObjectID INTEGER, Position TEXT)");
 	
-	print("Loaded Show/Hide Mapping editor by Razor.");
+	print("Loaded In-game building show/hide editor by Razor. (v1.0)");
 	
 	HideObjects();
 }
