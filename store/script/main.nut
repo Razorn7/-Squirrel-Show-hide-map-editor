@@ -32,6 +32,7 @@ function Player::PlayerShoot( player, weapon, hitEntity, hitPosition )
 		Console.Print("Object has been selected. ID: " + hitEntity.ModelIndex)
 		Console.Print("Warning: Don't press [BACKSPACE] if you're not sure to hide this object.");
 		::SelectedObject = hitEntity;
+		::Deleted = false;
 	}
 	else if (hitEntity && hitEntity.Type == OBJ_BUILDING && SelectedObject != null && Editing == true) Console.Print("You already have an object selected, press [BACKSPACE] to stop editing the object.");
 }
